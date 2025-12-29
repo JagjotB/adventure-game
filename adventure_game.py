@@ -30,11 +30,13 @@ def intro():
             intro()
 
 def house():
+    threat = random.choice(creature)
     pause_print("You approach the door of the house.")
-    pause_print("You are about to knock when the door opens and out comes a " + random.choice(creature) + "!")
-    pause_print("Eep! The wicked witch threw you in the stew!")
+    pause_print(f"You are about to knock when the door opens and out comes a {threat}!")
+    pause_print(f"Eep! The {threat} has attacked youo!")
     pause_print("You have been defeated!")
     pause_print("Would you like to play again? (y/n)")
+    
 
 def cave():
     pause_print("You peer into the cave.")
