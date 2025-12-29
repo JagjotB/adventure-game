@@ -1,4 +1,7 @@
 import time
+import random
+
+creature = ["wicked witch", "gorgon", "troll", "giant spider"]
 
 def pause_print(message):
     time.sleep(1)
@@ -15,11 +18,33 @@ def intro():
         pause_print("(Please enter 1 or 2).")
         choice = input()
         if choice == '1':
-            pause_print("You approach the door of the house.")
+            house()
+            break
+            
         elif choice == '2':
-            pause_print("You peer into the cave.")
+            cave()
+            break
+
         else:
             pause_print("Invalid choice, please try again.")
             intro()
 
+def house():
+    pause_print("You approach the door of the house.")
+    pause_print("You are about to knock when the door opens and out comes a " + random.choice(creature) + "!")
+    pause_print("Eep! The wicked witch threw you in the stew!")
+    pause_print("You have been defeated!")
+    pause_print("Would you like to play again? (y/n)")
+
+def cave():
+    pause_print("You peer into the cave.")
+    pause_print("It's dark and spooky, but you find a shiny sword!")
+    pause_print("You take the sword and feel more confident.")
+    pause_print("You approach the door of the house.")
+    pause_print("You are about to knock when the door opens and out steps a wicked witch!")
+    pause_print("You bravely draw your sword to face the wicked witch!")
+    pause_print("After a fierce battle, you have defeated the wicked witch!")
+    pause_print("You have saved the village!")
+    pause_print("Would you like to play again? (y/n)")
+    
 intro()
